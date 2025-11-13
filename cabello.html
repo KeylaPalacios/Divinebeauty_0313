@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Divine Beauty - Cabello</title>
+<style>
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+}
+
+.main-wrapper {
+    display: flex;
+    flex: 1;
+}
+
+.sidebar {
+    width: 250px;
+    background: linear-gradient(90deg, #ff7c90, #ffe1a4);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 30px;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+}
+
+.sidebar a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 180px;
+    height: 45px;
+    margin: 15px 0;
+    background-color: #f8baaa;
+    border-radius: 30px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 17px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.sidebar a:hover {
+    background-color: #ff9da1;
+    transform: scale(1.05);
+}
+
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: #f8baaa;
+    padding: 15px 30px;
+    color: white;
+    font-size: 26px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.header-icons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.header-icons a.user-icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: #f96094;
+    font-size: 22px;
+    background-color: white;
+    box-shadow: 0 0 6px rgba(0,0,0,0.2);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    text-decoration: none;
+}
+
+.header-icons a.user-icon:hover {
+    transform: scale(1.1);
+}
+
+.header-icons a.user-icon.carrito {
+    background-color: #f96094;
+    color: white;
+}
+
+.content {
+    padding: 30px;
+    flex: 1;
+}
+
+.content h1 {
+    color: #ff7c90;
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.filtros {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.filtros button {
+    padding: 8px 20px;
+    border: none;
+    background-color: #ff7c90;
+    color: white;
+    font-weight: bold;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.filtros button:hover {
+    background-color: #ff9da1;
+    transform: scale(1.05);
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.card {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    overflow: hidden;
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+.card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.card h3 {
+    color: #ff7c90;
+    margin: 15px 0 10px;
+}
+
+.card p {
+    color: #444;
+    font-size: 15px;
+    padding: 0 15px 20px;
+}
+
+.comprar-btn {
+    display: inline-block;
+    margin: 10px 0 20px;
+    padding: 10px 25px;
+    background-color: #5b8740;
+    color: white;
+    font-weight: bold;
+    border-radius: 25px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.comprar-btn:hover {
+    transform: scale(1.05);
+    background-color: #6fa84c;
+}
+
+footer {
+    background-color: #f8baaa;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-weight: bold;
+}
+</style>
+</head>
+<body>
+
+<div class="main-wrapper">
+    <div class="sidebar">
+        <a href="index.html">Inicio</a>
+        <a href="cabello.html">Cabello</a>
+        <a href="maquillaje.html">Maquillaje</a>
+        <a href="cuidado.html">Cuidado de la piel</a>
+        <a href="perfumes.html">Perfumes</a>
+        <a href="contacto.html">Contacto</a>
+    </div>
+
+    <div class="main-content">
+        <header>
+            <span>Divine Beauty</span>
+            <div class="header-icons">
+                <a href="carrito.html" class="user-icon carrito">🛒</a>
+                <a href="iniciosesion.html" class="user-icon">👤</a>
+            </div>
+        </header>
+
+        <div class="content">
+            <h1>Productos para Cabello</h1>
+
+            <div class="filtros">
+                <button data-filtro="todos">Todos</button>
+                <button data-filtro="planchas">Planchas</button>
+                <button data-filtro="secadoras">Secadoras</button>
+                <button data-filtro="tratamientos">Tratamientos</button>
+                <button data-filtro="acondicionadores">Acondicionadores</button>
+            </div>
+
+            <div class="cards">
+                <!-- Mezcla aleatoria -->
+                <div class="card" data-categoria="tratamientos">
+                    <img src="tratamiento2.jpg" alt="Tratamiento 2">
+                    <h3>Mascarilla Hidratante Garnier</h3>
+                    <p>$120.99 MX</p>
+                    <a href="#" class="comprar-btn">Comprar</a>
+                </div>
+                <div class="card" data-categoria="planchas">
+                    <img src="plancha1.jpg" alt="Plancha 1">
+                    <h3>Plancha Profesional</h3>
+                    <p>$3147.99 MX</p>
+                    <a href="#" class="comprar-btn">Comprar</a>
+                </div>
+                <div class="card" data-categoria="acondicionadores">
+                    <img src="acondicionador2.jpg" alt="Acondicionador 2">
+                    <h3>Acondicionador Coconut Milk</h3>
+                    <p>$135.00 MX</p>
+                    <a href="#" class="comprar-btn">Comprar</a>
+                </div>
+                <div class="card" data-categoria="secadoras">
+                    <img src="secadora3.jpg" alt="Secadora 3">
+                    <h3>Secadora Compacta</h3>
+                    <p>$1650.99 MX</p>
+                    <a href="#" class="comprar-btn">Comprar</a>
+                </div>
+                <div class="card" data-categoria="tratamientos">
+                    <img src="tratamiento1.jpg" alt="Tratamiento 1">
+                    <h3>Tratamiento Nutritivo Kuul</h3>
+                    <p>$150.00 MX</p>
+                    <a href="#" class="comprar-btn">Comprar</a>
+                </div>
+                <div class="card" data-categoria="planchas">
+                    <img src="plancha2.jpg" alt="Plancha 2">
+                    <h3>Plancha Titanium</h3>
+                    <p>$1400.00 MX</p>
+                    <a href="#" class="comprar-btn">Comprar</a>
+                </div>
+                <div class="card" data-categoria="acondicionadores">
+                    <img src="acondicionador3.jpg" alt="Acondicionador 3">
+                    <h3>Acondicionador Biotin & Collagen</h3>
+                    <p>$150.00 MX</p>
+                    <a href="#" class="comprar-btn">Comprar</a>
+                </div>
+                <div class="card" data-categoria="secadoras">
+                    <img src="secadora1.jpg" alt="Secadora 1">
+                    <h3>Secadora Revlon</h3>
+                    <p>$500.99 MX</p>
+                    <a href="#" class="comprar-btn">Comprar</a>
+                </div>
+                <div class="card" data-categoria="planchas">
+                    <img src="plancha3.jpg" alt="Plancha 3">
+                    <h3>Plancha Cerámica</h3>
+                    <p>$2500.99 MX</p>
+                    <a href="#" class="comprar-btn">Comprar</a>
+                </div>
+                <div class="card" data-categoria="acondicionadores">
+                    <img src="acondicionador1.jpg" alt="Acondicionador 1">
+                    <h3>Acondicionador Herbal Essences</h3>
+                    <p>$150.00 MX</p>
+                    <a href="#" class="comprar-btn">Comprar</a>
+                </div>
+                <div class="card" data-categoria="tratamientos">
+                    <img src="tratamiento3.jpg" alt="Tratamiento 3">
+                    <h3>Serum Reparador Loreal Paris</h3>
+                    <p>$125.99 MX</p>
+                    <a href="#" class="comprar-btn">Comprar</a>
+                </div>
+                <div class="card" data-categoria="secadoras">
+                    <img src="secadora2.jpg" alt="Secadora 2">
+                    <h3>Secadora Ionic</h3>
+                    <p>$760.99 MX</p>
+                    <a href="#" class="comprar-btn">Comprar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+Keyla Paola Palacios Espinoza 5-J
+</footer>
+
+<script>
+const botones = document.querySelectorAll('.filtros button');
+const tarjetas = document.querySelectorAll('.cards .card');
+
+function mostrarTarjetas(filtro) {
+    let contador = 0;
+    tarjetas.forEach(card => {
+        if(filtro === 'todos'){
+            card.style.display = 'block';
+        } else if(card.getAttribute('data-categoria') === filtro){
+            if(contador < 3){
+                card.style.display = 'block';
+                contador++;
+            } else {
+                card.style.display = 'none';
+            }
+        } else {
+            card.style.display = 'none';
+        }
+    });
+}
+
+mostrarTarjetas('todos');
+
+botones.forEach(boton => {
+    boton.addEventListener('click', () => {
+        const filtro = boton.getAttribute('data-filtro');
+        mostrarTarjetas(filtro);
+    });
+});
+</script>
+
+</body>
+</html>

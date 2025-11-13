@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Divine Beauty - Maquillaje</title>
+<style>
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+}
+
+.main-wrapper {
+    display: flex;
+    flex: 1;
+}
+
+.sidebar {
+    width: 250px;
+    background: linear-gradient(90deg, #ff7c90, #ffe1a4);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 30px;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+}
+
+.sidebar a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 180px;
+    height: 45px;
+    margin: 15px 0;
+    background-color: #f8baaa;
+    border-radius: 30px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 17px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.sidebar a:hover {
+    background-color: #ff9da1;
+    transform: scale(1.05);
+}
+
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: #f8baaa;
+    padding: 15px 30px;
+    color: white;
+    font-size: 26px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.header-icons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.header-icons a.user-icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: #f96094;
+    font-size: 22px;
+    background-color: white;
+    box-shadow: 0 0 6px rgba(0,0,0,0.2);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    text-decoration: none;
+}
+
+.header-icons a.user-icon:hover {
+    transform: scale(1.1);
+}
+
+.header-icons a.user-icon.carrito {
+    background-color: #f96094;
+    color: white;
+}
+
+.content {
+    padding: 30px;
+    flex: 1;
+}
+
+.content h1 {
+    color: #ff7c90;
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.filtros {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.filtros button {
+    padding: 8px 20px;
+    border: none;
+    background-color: #ff7c90;
+    color: white;
+    font-weight: bold;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.filtros button:hover {
+    background-color: #ff9da1;
+    transform: scale(1.05);
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.card {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    overflow: hidden;
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+.card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.card h3 {
+    color: #ff7c90;
+    margin: 15px 0 10px;
+}
+
+.card p {
+    color: #444;
+    font-size: 15px;
+    padding: 0 15px 20px;
+}
+
+.comprar-btn {
+    display: block;
+    width: 120px;
+    margin: 10px auto 20px;
+    padding: 10px 0;
+    background-color: #5b8740;
+    color: white;
+    font-weight: bold;
+    border-radius: 25px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.comprar-btn:hover {
+    transform: scale(1.05);
+    background-color: #6fa84c;
+}
+
+footer {
+    background-color: #f8baaa;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-weight: bold;
+}
+</style>
+</head>
+<body>
+
+<div class="main-wrapper">
+    <div class="sidebar">
+        <a href="index.html">Inicio</a>
+        <a href="cabello.html">Cabello</a>
+        <a href="maquillaje.html">Maquillaje</a>
+        <a href="cuidado.html">Cuidado de la piel</a>
+        <a href="perfumes.html">Perfumes</a>
+        <a href="contacto.html">Contacto</a>
+    </div>
+
+    <div class="main-content">
+        <header>
+            <span>Divine Beauty</span>
+            <div class="header-icons">
+                <a href="carrito.html" class="user-icon carrito">🛒</a>
+                <a href="iniciosesion.html" class="user-icon">👤</a>
+            </div>
+        </header>
+
+        <div class="content">
+            <h1>Productos de Maquillaje</h1>
+
+            <div class="filtros">
+                <button data-filtro="todos">Todos</button>
+                <button data-filtro="bases">Bases</button>
+                <button data-filtro="labiales">Labiales</button>
+                <button data-filtro="rubores">Rubores</button>
+                <button data-filtro="polvos">Polvos</button>
+            </div>
+
+            <div class="cards">
+                <!-- Bases -->
+                <div class="card" data-categoria="bases">
+                    <img src="base1.jpg" alt="Base 1">
+                    <h3>Base Pink up </h3>
+                    <p>$150.00 MX</p>
+                    <a href="#" class="comprar-btn">Comprar</a>
+                </div>
+                <div class="card" data-categoria="bases">
+                    <img src="base2.jpg" alt="Base 2">
+                    <h3>Base Maybeline Superstay</h3>
+                    <p>$200.00 MX</p>
+                    <a href="#" class="comprar-btn">Comprar</a>
+                </div>
+                <div class="card" data-categoria="bases">
+                    <img src="base3.png" alt="Base 3">
+                    <h3>Base Loreal 30 hrs</h3>
+                    <p>$300.00 MX</p>
+                    <a href="#" class="comprar-btn">Comprar</a>
+                </div>
+
+                <!-- Labiales -->
+                <div class="card" data-categoria="labiales">
+                    <img src="labial1.jpg" alt="Labial 1">
+                    <h3>Labial Bisuu tono Rojo</h3>
+                    <p>$100.00 MX</p>
+                    <a href="#" class="comprar-btn">Comprar</a>
+                </div>
+                <div class="card" data-categoria="labiales">
+                    <img src="labial2.jpg" alt="Labial 2">
+                    <h3>Labial Superstay vinyl tono rojo</h3>
+                    <p>$180.00 MX</p>
+                    <a href="#" class="comprar-btn">Comprar</a>
+                </div>
+                <div class="card" data-categoria="labiales">
+                    <img src="labial3.jpg" alt="Labial 3">
+                    <h3>Labial gloss Elf</h3>
+                    <p>$260.00 MX</p>
+                    <a href="#" class="comprar-btn">Comprar</a>
+                </div>
+
+                <!-- Rubores -->
+                <div class="card" data-categoria="rubores">
+                    <img src="rubor1.jpg" alt="Rubor 1">
+                    <h3>Rubor Bissu</h3>
+                    <p>$80.00 MX</p>
+                    <a href="#" class="comprar-btn">Comprar</a>
+                </div>
+                <div class="card" data-categoria="rubores">
+                    <img src="rubor2.jpg" alt="Rubor 2">
+                    <h3>Rubor Rare Beauty</h3>
+                    <p>$150.00 MX</p>
+                    <a href="#" class="comprar-btn">Comprar</a>
+                </div>
+                <div class="card" data-categoria="rubores">
+                    <img src="rubor3.jpg" alt="Rubor 3">
+                    <h3>Rubor Gucci</h3>
+                    <p>$650.00 MX</p>
+                    <a href="#" class="comprar-btn">Comprar</a>
+                </div>
+
+                <!-- Polvos -->
+                <div class="card" data-categoria="polvos">
+                    <img src="polvo1.jpg" alt="Polvo 1">
+                    <h3>Polvo Makeup By Mario</h3>
+                    <p>$650.00 MX</p>
+                    <a href="#" class="comprar-btn">Comprar</a>
+                </div>
+                <div class="card" data-categoria="polvos">
+                    <img src="polvo2.jpg" alt="Polvo 2">
+                    <h3>Polvo Mary Kay</h3>
+                    <p>$250.00 MX</p>
+                    <a href="#" class="comprar-btn">Comprar</a>
+                </div>
+                <div class="card" data-categoria="polvos">
+                    <img src="polvo3.jpg" alt="Polvo 3">
+                    <h3>Polvo Too faced</h3>
+                    <p>$556.99 MX</p>
+                    <a href="#" class="comprar-btn">Comprar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+Keyla Paola Palacios Espinoza 5-J
+</footer>
+
+<script>
+const botones = document.querySelectorAll('.filtros button');
+const cardsContainer = document.querySelector('.cards');
+const tarjetas = Array.from(document.querySelectorAll('.card'));
+
+// Función para mezclar un array
+function mezclar(array) {
+    return array.sort(() => Math.random() - 0.5);
+}
+
+// Mostrar tarjetas según filtro
+function mostrarTarjetas(filtro) {
+    let tarjetasAMostrar;
+
+    if(filtro === 'todos'){
+        tarjetasAMostrar = mezclar([...tarjetas]); // mezcla todas
+    } else {
+        tarjetasAMostrar = tarjetas.filter(card => card.getAttribute('data-categoria') === filtro);
+        tarjetasAMostrar = mezclar(tarjetasAMostrar); // mezcla las filtradas
+    }
+
+    // Limpiar contenedor y añadir tarjetas
+    cardsContainer.innerHTML = '';
+    tarjetasAMostrar.forEach(card => cardsContainer.appendChild(card));
+}
+
+// Inicial
+mostrarTarjetas('todos');
+
+// Evento de botones
+botones.forEach(boton => {
+    boton.addEventListener('click', () => {
+        const filtro = boton.getAttribute('data-filtro');
+        mostrarTarjetas(filtro);
+    });
+});
+</script>
+
+</body>
+</html>
